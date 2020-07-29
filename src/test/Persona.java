@@ -4,6 +4,15 @@ public class Persona {
 	//propiedades
 	private String nit, nombre, direccion, telefono, email;
 	
+	
+	public Persona(String nit, String nombre, String direccion, String telefono, String email) {
+		this.nit = nit;
+		this.nombre = nombre;
+		this.direccion = direccion;
+		this.telefono = telefono;
+		this.email = email;
+	}
+
 	//Getters
 	public String getNit() {
 		return nit;
@@ -47,12 +56,7 @@ public class Persona {
 	}
 	
 	//metodos
-	public void verDatos() {
-		System.out.println("---*** Datos de la persona ***---");
-		System.out.println("Nombre: " + this.nombre);
-		System.out.println("Nit: " + this.nit);
-		System.out.println("Direccion: " + this.direccion);
-		System.out.println("Teléfono: " + this.telefono);
-		System.out.println("Email: " + this.email);
+	public String verDatos() {
+		return this.nombre+"-"+this.nit+"-"+this.direccion+"-"+this.telefono+"-"+this.email;
 	}
 }

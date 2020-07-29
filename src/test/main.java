@@ -11,13 +11,18 @@ public class main {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Persona persona_1 = new Persona();
-		Persona persona_2 = new Persona();
-		persona_1.setNombre("JAJAJA HOLA XD");
-		persona_1.verDatos();
-		persona_2.setEmail("JFKADSJ.FKDLS@FJSL.COM");
-		persona_2.verDatos();
-		System.out.println("que pex");
+		Persona personas[] = new Persona[5];
+		
+		for(int i=0; i<=personas.length-1; i++) {
+			Persona persona = new Persona("nit"+i, "nombre"+i, "direccion"+i, "telefono"+i, "email"+i);
+			personas[i] = persona;
+		}
+		
+		System.out.println("Datod de las peronas:");
+		for(int j=0; j<=personas.length-1; j++) {
+			System.out.println(personas[j].verDatos());
+		}
+		
 	}
 
 }
